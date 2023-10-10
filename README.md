@@ -2,7 +2,7 @@
 
 ## 贡献者
 
-- [量潮](https://github.com/quanttide)成员：[@Guo-Zhang]
+- [量潮](https://github.com/quanttide)成员：[@Guo-Zhang](https://github.com/Guo-Zhang)
 - 社区专家：[@CoreyBin](https://github.com/CoreyBin)
 
 ## 许可证和版权
