@@ -1,0 +1,18 @@
+format: jb-book
+root: index.md
+parts:
+  - caption: 快速入门
+    chapters:
+      - file: quick_start/README.md
+  - caption: 数据生命周期
+    chapters:
+      - file: lifecycles/README.md
+  - caption: 系统治理
+    chapters:
+      - file: governing/README.md
+  - caption: 研发流程管理
+    chapters:
+      - file: dataops/README.md
+  - caption: 数据共享
+    chapters:
+      - file: sharing/README.md
