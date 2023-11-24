@@ -16,3 +16,10 @@ parts:
   - caption: 数据共享
     chapters:
       - file: sharing/README.md
+  - caption: 行业应用场景
+    chapters:
+      - file: applications/construction/README.md
+        sections:
+          - file: applications/construction/bim/README.md
+            sections: 
+              - file: applications/construction/bim/reviewing_design_models.md
