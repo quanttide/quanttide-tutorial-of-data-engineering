@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>前言 &#8212; 量潮数据工程教程</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="快速入门" href="quick_start/README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">量潮数据工程教程</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    前言
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">快速入门</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quick_start/README.html">快速入门</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据生命周期</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lifecycles/README.html">数据生命周期</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">系统治理</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="governing/README.html">系统治理</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">研发流程管理</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="dataops/README.html">研发流程管理</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">数据共享</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sharing/README.html">数据共享</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">行业应用场景</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="applications/construction/README.html">建筑行业</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="applications/construction/bim/README.html">建筑信息模型</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="applications/construction/bim/reviewing_design_models.html">设计审查</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>前言</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">什么是数据工程？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">本书内容如何组织？</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">如何描述数据处理流程？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">如何治理数据处理系统？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">如何管理工作流程？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">如何跨组织共享数据？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">如何搭建数据工程平台？</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">对本书读者的建议</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>前言<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>这本教程将介绍一个你在日常工作或学习中经常碰到但可能不太了解的专业知识——“数据工程”。它教你如何更高效地处理数据，让数据工作不再那么复杂纠结，比如，采集数据时如何自动完成、分析数据时如何减少错误、与别人共享数据时应注意什么等。通过阅读这本教程，你将掌握处理数据的有效方法，工作或学习中的数据问题也会更容易解决。</p>
+<section id="id2">
+<h2>什么是数据工程？<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>假如你是一个正在帮助其他同事分析数据的办公室白领，或者是市场分析师、投资机构研究员等可能需要分析公开数据的角色，你可能每天都在收集和整理不同来源、不同原始格式的数据，使用Excel等工具预处理已有变量、计算想要的结果、通过图表展示结果，并且把结果提交给老师、上级、客户、同事等其他人。在反复做数据分析的过程中，你是否感觉到收集和整理数据等过程十分枯燥乏味并且有无意义感，一不小心就容易出错、并且出错还会对分析结果有很大影响？你是否有思考过如何可以提升效率和质量？</p>
+<p>数据工程就是解决这类问题的方法论。我们应用软件工程的方法和技术，我们采用软件工程的方法论和技术手段，为数据处理过程中的重复性问题，比如收集、存储、预处理等，提供可重复使用的解决方案，从而让数据分析人员可以更加流畅地执行分析过程、专注于分析问题本身。这些解决方案中，许多都需要专门处理某一类任务的复杂基础设施支持，因此有专家专注于搭建和维护这些基础设施。我们把这些专家称为“数据工程师”，狭义上的“数据工程”指的就是他们的职责范围。</p>
+<p>无论是一个数据分析人员围绕Excel做数据分析，还是成千上万人围绕海量数据的协同，在数据工程领域都会面临类似的挑战，也因此可以适用类似的方法。因此，数据工程无论对于个人还是组织、对于小团队还是大团队，都是有普适意义的。深入理解数据工程的思路、方法和工具，有利于这些问题的解决。</p>
+</section>
+<section id="id3">
+<h2>本书内容如何组织？<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>我们将会以从局部到整体的方式，逐步建立对整个数据工程领域问题的系统理解。我们先通过设定严格的假设，着眼于某一个具体环节，深入阐述其中的问题和解决方案；然后，再逐步放宽假设，从而暴露出整体流程中的一些关键问题及其相互影响关系，以方便阐述对应的解决方案。</p>
+<section id="id4">
+<h3>如何描述数据处理流程？<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>假设只有你一个人负责整个数据分析流程。比如，量潮的前身，研究线上平台价格的经济学课题组China’s Prices Project。假设你是创始人，你需要编写爬虫程序，每日采集多个电商网站商品价格和销量数据，经预处理标准化后计算线上价格指数，并以报表形式展示结果；分析完成后，原始和中间数据将逐步备份，以节省存储空间。</p>
+<p>我们将会使用“数据生命周期”的概念来描述整个数据从产生到消失的全过程，包括采集、存储、预处理、分析、可视化、传输、备份等。我们计划参考已有的各机构和学者对数据生命周期的理解，对此概念进行严谨全面的定义。在此基础上，我们将介绍各个阶段可能会遇到的常见问题，并给出相应的解决方案，帮助读者建立一个系统的问题与解决框架。较复杂的技术细节，将会在以后独立的教程中详细阐述，例如网页爬虫教程、数据分析教程、数据库教程等。</p>
+</section>
+<section id="id5">
+<h3>如何治理数据处理系统？<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>现在，我们放宽之前的假设。假设在China’s Prices Project项目组中，有多个人共同协作完成价格指数的编制。例如，你负责采集多个电商平台的原始数据，小明负责汇总和对齐多个平台的价格和销量数据，小红负责分析数据和绘制线上价格指数。由于每个人的任务都直接影响后续工作，所以团队成员在信息交流和工作流程管理上需要密切配合。例如,你采集的数据格式需要与小明的需求匹配，小明对齐好的数据也要方便小红进行下游分析；作为数据采集人和分析人，你与小红在一些技术细节或问题理解上，由于背景和思考角度的差异还可能会产生一定程度上的误解。只有通过密切的协作与交流,才能让项目顺利进行。</p>
+<p>我们从系统工程的视角为这个问题提供解决方案。其中一个重要原则是增加系统的可观测性。我们可以设法实时跟踪每个阶段数据的流向和质量变化过程，比如设计和使用数据流程监控平台来追踪数据在每个步骤流向何处、数据质量如何，以便及时发现和诊断问题，进而不断提高整个系统的稳定性。另一个重点是管理系统中的依赖关系，好的编排工具能够清晰展示不同处理环节的先后顺序，有助于各成员对整体工作流程的统一理解，避免因误解而导致的问题。增加系统间的解耦能力也很重要。一旦某个环节出现问题，应设计好机制把影响范围限制在最小范围内，不影响其他正常运行中的流程。这就需要提前针对可能的异常情况，设计对应的隔离机制。</p>
+</section>
+<section id="id6">
+<h3>如何管理工作流程？<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>在前面我们讨论数据处理流程时，实际上隐含了一个不太现实的假设——“人不会犯错误”。但是，在实际项目中，即使是经验较丰富的数据处理人员，在处理复杂任务时也难免会出现疏忽。比如，某个电商的网页爬虫程序没有经过测试就被匆匆忙忙地使用起来，可能会出现运行不稳定的情况。</p>
+<p>为了更好地应对这类隐蔽的风险，我们计划介绍如何遵循DataOps提出工作流程管理数据处理项目的研发过程的每个阶段。我们会遵循设计、开发、再构建、测试、发布、部署、运维、监控等顺序，明确研发每个阶段的工作内容和质量标准。</p>
+</section>
+<section id="id7">
+<h3>如何跨组织共享数据？<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>在实际商业环境中，不同组织之间的数据合作往往需要面临许多问题的解决。比如，量潮使用China’s Prices Project积累的技术为客户提供一套线上价格监控平台。该平台需要整合各家网站商品数据，进行横向分析，并提供定价建议。但由于数据格式标准不一致，直接整合使用将导致大量错误。个别敏感字段，如买家姓名，如果直接共享，也会触犯隐私法规。此外，参与各方在收集与应用数据上的权责需要明确规定。</p>
+<p>我们计划介绍制定统一的数据字段和结构标准的方案。对于敏感信息的存储和分享，我们计划介绍数据加密、数据脱敏、隐私计算等数据安全技术。商业数据的交易环节会涉及到财务和法务知识，因此我们将介绍如何评估数据资产的价值、如何制定多方数据使用授权实践等。网页爬虫等技术需要合规，因此我们也会接受合规评估方案。</p>
+</section>
+<section id="id8">
+<h3>如何搭建数据工程平台？<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>在长期的实践中，我们深刻认识到，数据分析流程中的步骤通常较多，任何一个步骤出现问题都可能对整个分析流程产生负面影响。假设有个平台，它可以积累在某个处理环节的经验，以提高构建处理流程的效率；可以更透明地展示每个项目的完整流程，以提高团队协作水平；可以严格地约束开发者的行为，以确保工程质量；最后，帮助减少跨组织分享的成本，最终实现数据的价值。</p>
+<p>我们正在研发的量潮数据云正是为了满足上述需求而创建的平台。我们计划提供持续交付数据集和应用的功能，通过集成Serverless计算等标准云服务来提高数据处理流程的效率。我们计划通过引入可观测性和工作流等功能来加强系统治理，以确保平台的稳定性和可靠性。我们还会通过拓展DevOps解决方案为平台用户提供符合DataOps规范的研发管理流程管理。我们的平台还支持与自研或社区金融法务SaaS以及数据交易所等进行打通，最大程度地扫清数据共享的障碍。我们致力于为用户提供一站式的数据工程管理和协作平台，帮助我们的用户从繁琐复杂的数据工程问题中解脱出来，专注于自己的数据分析工作。</p>
+</section>
+</section>
+<section id="id9">
+<h2>对本书读者的建议<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>对于媒体记者等不需要实际操作的读者,我们希望这本教程可以起到扫盲作用。您可以初步了解数据工程这个新兴领域的基本概念，例如各个处理环节的含义，以及它在不同行业中的应用场景。理解这些就可以，无需深入解读各个技术细节。</p>
+<p>对于需要日常参与数据分析工作的各类分析人员，我们希望通过示例详细阐述每一个数据处理步骤的具体操作方法，从数据采集到数据清洗、转换、分析建模到上线部署等全流程，让您掌握进行数据分析过程中需要的必要数据工程相关的思路、方法和工具。</p>
+<p>对于已在数据工程领域工作过的从业人员,本教程主要起到梳理和串联知识体系的作用。您可能需要参考更专业的专业书籍或论文,进一步深入研究每个技术细节和方法论,以应对实际产品或研发项目中的技术难点。</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="quick_start/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">快速入门</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">什么是数据工程？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">本书内容如何组织？</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">如何描述数据处理流程？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">如何治理数据处理系统？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">如何管理工作流程？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">如何跨组织共享数据？</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">如何搭建数据工程平台？</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">对本书读者的建议</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
