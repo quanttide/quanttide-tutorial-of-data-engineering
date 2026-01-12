@@ -7,9 +7,14 @@ parts:
   - caption: 数据生命周期
     chapters:
       - file: lifecycles/README.md
+        sections:
+          - file: lifecycles/data-engine.md
+          - file: lifecycles/etl.md
   - caption: 系统治理
     chapters:
       - file: governing/README.md
+        sections:
+          - file: governing/scheduling-concepts.md
   - caption: 研发流程管理
     chapters:
       - file: dataops/README.md
